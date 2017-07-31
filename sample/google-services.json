@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "846149429333",
+    "firebase_url": "https://updateme-sample.firebaseio.com",
+    "project_id": "updateme-sample",
+    "storage_bucket": "updateme-sample.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846149429333:android:cb406e43da997861",
+        "android_client_info": {
+          "package_name": "com.salyangoz.updateme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846149429333-a6nc9r05pph081h57mu0qqd6jcqaips5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVGKnfANw8ySpLhhiliu2Yf7cN8tAKEww"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

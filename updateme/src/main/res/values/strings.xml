@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Update Me</string>
+    <string name="dialog_title">New Version Available</string>
+    <string name="dialog_message">Please, update app to new version to continue using.</string>
+    <string name="dialog_positive_button_title">Update</string>
+    <string name="dialog_negative_button_title">Later</string>
+    <string name="dialog_continue_usingapp_button_title">Later</string>
+</resources>
