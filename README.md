@@ -57,6 +57,53 @@ Introduction
 
 5. Publish Changes (Top right corner)
 
+Usage
+--------
+
+###### Basic Usage
+
+```groovy
+UpdateMe.with(this).check();
+```
+
+###### Advanced Usage
+Features
+1. Set dialog visibility
+2. Add listeners to Positive and Negative button clicks. 
+3. Set positive and negative button text and colors. 
+4. Set custom icon 
+
+```groovy
+UpdateMe.with(this, 30).setDialogVisibility(true)
+                .continueButtonVisibility(true)
+                .setPositiveButtonText("MF Go!")
+                .setNegativeButtonText("Oh No...")
+                .setDialogIcon(R.drawable.common_google_signin_btn_icon_dark)
+                .onNegativeButtonClick(new OnNegativeButtonClickListener() {
+
+                    @Override
+                    public void onClick(LovelyStandardDialog dialog) {
+
+                        Log.d(UpdateMe.TAG, "Later Button Clicked");
+                        dialog.dismiss();
+                    }
+                })
+                .onPositiveButtonClick(new OnPositiveButtonClickListener() {
+
+                    @Override
+                    public void onClick(LovelyStandardDialog dialog) {
+
+                        Log.d(UpdateMe.TAG, "Update Button Clicked");
+                        dialog.dismiss();
+                    }
+                })
+                .check();
+```
+
+Special Thanks
+--------
+Custom alert dialogs pulled from LovelyDialog for Android repository. https://github.com/yarolegovich/LovelyDialog
+
 
 License
 --------
