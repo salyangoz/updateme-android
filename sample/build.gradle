@@ -20,12 +20,21 @@ android {
     }
 }
 
+repositories {
+    maven {
+        url 'https://dl.bintray.com/salyangoz/maven/'
+    }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:26.0.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'io.salyangoz.updateme:updateme:0.1.0'
 
-    compile project(':updateme')
+    //compile project(':updateme')
+
+
 
 }
 
