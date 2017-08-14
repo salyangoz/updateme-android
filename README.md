@@ -4,7 +4,7 @@ UpdateMe
 A powerful force update library for Android
 
 
-![alt text](http://www.salyangoz.com.tr/updateme/sample.png)
+![alt text](http://www.salyangoz.com.tr/updateme/sample-android.png)
 
 
 
@@ -17,22 +17,14 @@ Download [the latest JAR][2] or grab via Gradle. (Project's gradle file):
 This project uses Firebase remote config feature. Because of this reason you need to add google services into your project.
 ```groovy
 dependencies {
-<<<<<<< HEAD
   compile 'io.salyangoz.updateme:updateme:0.1.0-Beta'
-=======
-  compile 'com.salyangoz.updateme:updateme:0.1.0-Beta'
->>>>>>> origin/beta
 }
 apply plugin: 'com.google.gms.google-services'
 ```
 or Maven:
 ```xml
 <dependency>
-<<<<<<< HEAD
   <groupId>io.salyangoz.updateme</groupId>
-=======
-  <groupId>com.salyangoz.updateme</groupId>
->>>>>>> origin/beta
   <artifactId>updateme</artifactId>
   <version>0.1.0-Beta</version>
 </dependency>
