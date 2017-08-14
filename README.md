@@ -127,7 +127,7 @@ License
     limitations under the License.
 
 
- [1]: http://salyangoz.github.io/updateme/
+ [1]: http://salyangoz.github.io/updateme-android/
  [2]: https://search.maven.org/remote_content?g=com.salyangoz.updateme&a=updateme&v=LATEST
  [snap]: https://oss.sonatype.org/content/repositories/snapshots/
 
