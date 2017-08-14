@@ -1,4 +1,4 @@
-package com.salyangoz.sample;
+package io.salyangoz.sample;
 
 import android.app.Application;
 

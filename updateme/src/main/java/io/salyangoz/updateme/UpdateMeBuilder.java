@@ -1,8 +1,8 @@
-package com.salyangoz.updateme;
+package io.salyangoz.updateme;
 
-import com.salyangoz.updateme.listener.OnNegativeButtonClickListener;
-import com.salyangoz.updateme.listener.OnPositiveButtonClickListener;
-import com.salyangoz.updateme.listener.OnUpdateNeededListener;
+import io.salyangoz.updateme.listener.OnNegativeButtonClickListener;
+import io.salyangoz.updateme.listener.OnPositiveButtonClickListener;
+import io.salyangoz.updateme.listener.OnUpdateNeededListener;
 
 import android.content.Context;
 

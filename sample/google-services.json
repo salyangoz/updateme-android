@@ -36,6 +36,68 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846149429333:android:8d7c37b5a3ff2960",
+        "android_client_info": {
+          "package_name": "salyangozmavenupdatemetest.salyangoz.com.updateme_salyangoz_maven_test_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846149429333-a6nc9r05pph081h57mu0qqd6jcqaips5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVGKnfANw8ySpLhhiliu2Yf7cN8tAKEww"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846149429333:android:0b5f1447f23301f7",
+        "android_client_info": {
+          "package_name": "io.salyangoz.updateme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846149429333-a6nc9r05pph081h57mu0qqd6jcqaips5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVGKnfANw8ySpLhhiliu2Yf7cN8tAKEww"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"

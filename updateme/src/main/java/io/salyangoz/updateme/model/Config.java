@@ -1,4 +1,4 @@
-package com.salyangoz.updateme.model;
+package io.salyangoz.updateme.model;
 
 /**
  * Created by Salyangoz.Co on 29/07/2017.

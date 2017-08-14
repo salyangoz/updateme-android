@@ -1,4 +1,4 @@
-package com.salyangoz.updateme.listener;
+package io.salyangoz.updateme.listener;
 
 import com.yarolegovich.lovelydialog.LovelyStandardDialog;
 
