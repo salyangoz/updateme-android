@@ -4,7 +4,7 @@ ext {
     bintrayRepo = 'maven'
     bintrayName = 'updateme-android'
 
-    publishedGroupId = 'com.salyangoz.updateme'
+    publishedGroupId = 'io.salyangoz.updateme'
     libraryName = 'UpdateMe'
     artifact = 'updateme'
 

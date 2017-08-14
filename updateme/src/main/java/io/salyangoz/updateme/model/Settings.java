@@ -1,4 +1,4 @@
-package com.salyangoz.updateme.model;
+package io.salyangoz.updateme.model;
 
 import java.io.Serializable;
 

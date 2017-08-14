@@ -1,4 +1,4 @@
-package com.salyangoz.updateme.util;
+package io.salyangoz.updateme.util;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,7 +6,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.util.Log;
 
-import com.salyangoz.updateme.UpdateMe;
+import io.salyangoz.updateme.UpdateMe;
 
 /**
  * Created by Salyangoz.Co on 29/07/2017.

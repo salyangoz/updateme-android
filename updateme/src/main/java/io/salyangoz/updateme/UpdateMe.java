@@ -1,4 +1,4 @@
-package com.salyangoz.updateme;
+package io.salyangoz.updateme;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,12 +10,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
-import com.salyangoz.updateme.listener.OnNegativeButtonClickListener;
-import com.salyangoz.updateme.listener.OnPositiveButtonClickListener;
-import com.salyangoz.updateme.listener.OnUpdateNeededListener;
-import com.salyangoz.updateme.model.Config;
-import com.salyangoz.updateme.model.Settings;
-import com.salyangoz.updateme.util.Utilities;
+import io.salyangoz.updateme.listener.OnNegativeButtonClickListener;
+import io.salyangoz.updateme.listener.OnPositiveButtonClickListener;
+import io.salyangoz.updateme.listener.OnUpdateNeededListener;
+import io.salyangoz.updateme.model.Config;
+import io.salyangoz.updateme.model.Settings;
+import io.salyangoz.updateme.util.Utilities;
 import com.yarolegovich.lovelydialog.LovelyStandardDialog;
 
 import java.util.HashMap;
