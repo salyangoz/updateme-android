@@ -17,7 +17,7 @@ Download [the latest JAR][2] or grab via Gradle. (Project's gradle file):
 This project uses Firebase remote config feature. Because of this reason you need to add google services into your project.
 ```groovy
 dependencies {
-  compile 'io.salyangoz.updateme:updateme:0.1.0-Beta'
+  compile 'io.salyangoz.updateme:updateme:0.1.0'
 }
 apply plugin: 'com.google.gms.google-services'
 ```
@@ -26,7 +26,7 @@ or Maven:
 <dependency>
   <groupId>io.salyangoz.updateme</groupId>
   <artifactId>updateme</artifactId>
-  <version>0.1.0-Beta</version>
+  <version>0.1.0</version>
 </dependency>
 ```
 
