@@ -11,12 +11,14 @@ public class Settings implements Serializable {
     private String title;
     private String message;
     private String updateUrl;
+    private Boolean updateNeeeded;
 
-    public Settings(String title, String description, String updateUrl) {
+    public Settings(String title, String description, String updateUrl,Boolean updateNeeeded) {
 
         this.title = title;
         this.message = description;
         this.updateUrl = updateUrl;
+        this.updateNeeeded = updateNeeeded;
     }
 
     public String getTitle() {
@@ -47,5 +49,15 @@ public class Settings implements Serializable {
     public void setUpdateUrl(String updateUrl) {
 
         this.updateUrl = updateUrl;
+    }
+
+    public Boolean getUpdateNeeeded() {
+
+        return updateNeeeded;
+    }
+
+    public void setUpdateNeeeded(Boolean updateNeeeded) {
+
+        this.updateNeeeded = updateNeeeded;
     }
 }
