@@ -111,12 +111,12 @@ public class UpdateMe implements OnCompleteListener {
             final String positiveButtonText = this.positiveButtonText;
             final String appVersion = Utilities.getAppVersion(context);
 
-            Settings settings = new Settings(title, message, updateUrl);
+            Settings settings = new Settings(title, message, updateUrl,(updateNeed && (!TextUtils.equals(appVersion, currentVersion))));
+            if (onUpdateNeededListener != null)
+                onUpdateNeededListener.onUpdateNeeded(settings);
 
             //If version is different from the current one call listener to show dialog
             if ((!TextUtils.equals(appVersion, currentVersion))) {
-                if (onUpdateNeededListener != null)
-                    onUpdateNeededListener.onUpdateNeeded(settings);
 
                 if (!dialogVisibility)
                     return;

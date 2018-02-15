@@ -13,7 +13,7 @@ ext {
     siteUrl = 'http://github.com/salyangoz/updateme-android'
     gitUrl = 'http://github.com/salyangoz/updateme-android.git'
 
-    libraryVersion = '0.1.0'
+    libraryVersion = '0.1.1'
 
     developerId = 'salyangoz'
     developerName = 'Salyangoz Company'
@@ -26,14 +26,14 @@ ext {
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.0"
+    buildToolsVersion "26.0.2"
 
 
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
-        versionName "0.1.0"
+        versionName "0.1.1"
 
     }
     buildTypes {
@@ -49,8 +49,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     //Firebase
-    compile 'com.google.firebase:firebase-core:11.0.2'
-    compile 'com.google.firebase:firebase-config:11.0.2'
+    compile 'com.google.firebase:firebase-core:11.8.0'
+    compile 'com.google.firebase:firebase-config:11.8.0'
 
     //Lovely Dialog
     compile 'com.yarolegovich:lovely-dialog:1.0.7'
