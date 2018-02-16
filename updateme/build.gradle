@@ -13,7 +13,7 @@ ext {
     siteUrl = 'http://github.com/salyangoz/updateme-android'
     gitUrl = 'http://github.com/salyangoz/updateme-android.git'
 
-    libraryVersion = '0.1.1'
+    libraryVersion = '0.1.2'
 
     developerId = 'salyangoz'
     developerName = 'Salyangoz Company'
@@ -33,7 +33,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
-        versionName "0.1.1"
+        versionName "0.1.2"
 
     }
     buildTypes {

@@ -10,12 +10,15 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
+
 import io.salyangoz.updateme.listener.OnNegativeButtonClickListener;
 import io.salyangoz.updateme.listener.OnPositiveButtonClickListener;
+import io.salyangoz.updateme.listener.OnUpdateMeListener;
 import io.salyangoz.updateme.listener.OnUpdateNeededListener;
 import io.salyangoz.updateme.model.Config;
 import io.salyangoz.updateme.model.Settings;
 import io.salyangoz.updateme.util.Utilities;
+
 import com.yarolegovich.lovelydialog.LovelyStandardDialog;
 
 import java.util.HashMap;
@@ -34,6 +37,7 @@ public class UpdateMe implements OnCompleteListener {
     private static final String DEFAULT_CURRENT_VERSION = "1.0.0";
     private static final Boolean DEFAULT_UPDATE_NEEDED = false;
     private OnUpdateNeededListener onUpdateNeededListener;
+    private OnUpdateMeListener onUpdateMeListener;
     private FirebaseRemoteConfig firebaseRemoteConfig;
     private int checkIntervalInSeconds;
     private int positiveButtonColorRes;
@@ -56,9 +60,10 @@ public class UpdateMe implements OnCompleteListener {
         return new UpdateMeBuilder(context).setFetchInterval(fetchIntervalInSeconds);
     }
 
-    public UpdateMe(@NonNull Context context, OnUpdateNeededListener onUpdateNeededListener, OnNegativeButtonClickListener onNegativeButtonClickListener, OnPositiveButtonClickListener onPositiveButtonClickListener, int checkIntervalInSeconds, String positiveButtonText, String negativeButtonText, Boolean dialogVisibility, Boolean continueButtonVisibility, int dialogIcon, int positiveButtonColorRes, int negativeButtonColorRes, int topColorRes) {
+    public UpdateMe(@NonNull Context context,OnUpdateMeListener onUpdateMeListener, OnUpdateNeededListener onUpdateNeededListener, OnNegativeButtonClickListener onNegativeButtonClickListener, OnPositiveButtonClickListener onPositiveButtonClickListener, int checkIntervalInSeconds, String positiveButtonText, String negativeButtonText, Boolean dialogVisibility, Boolean continueButtonVisibility, int dialogIcon, int positiveButtonColorRes, int negativeButtonColorRes, int topColorRes) {
 
         this.context = context;
+        this.onUpdateMeListener = onUpdateMeListener;
         this.onUpdateNeededListener = onUpdateNeededListener;
         this.onPositiveButtonClickListener = onPositiveButtonClickListener;
         this.onNegativeButtonClickListener = onNegativeButtonClickListener;
@@ -111,12 +116,16 @@ public class UpdateMe implements OnCompleteListener {
             final String positiveButtonText = this.positiveButtonText;
             final String appVersion = Utilities.getAppVersion(context);
 
-            Settings settings = new Settings(title, message, updateUrl,(updateNeed && (!TextUtils.equals(appVersion, currentVersion))));
-            if (onUpdateNeededListener != null)
-                onUpdateNeededListener.onUpdateNeeded(settings);
+            boolean versionUpdateNeed = (updateNeed && (!TextUtils.equals(appVersion, currentVersion)));
+
+            Settings settings = new Settings(title, message, updateUrl, versionUpdateNeed);
+            if (onUpdateMeListener != null)
+                onUpdateMeListener.onUpdateMe(versionUpdateNeed);
 
             //If version is different from the current one call listener to show dialog
             if ((!TextUtils.equals(appVersion, currentVersion))) {
+                if (onUpdateNeededListener != null)
+                    onUpdateNeededListener.onUpdateNeeded(settings);
 
                 if (!dialogVisibility)
                     return;
@@ -158,6 +167,9 @@ public class UpdateMe implements OnCompleteListener {
 
             }
 
+        } else {
+            if (onUpdateMeListener != null)
+                onUpdateMeListener.onUpdateMe(updateNeed);
         }
 
     }
