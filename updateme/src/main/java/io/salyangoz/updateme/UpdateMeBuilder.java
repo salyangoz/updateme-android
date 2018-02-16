@@ -2,6 +2,7 @@ package io.salyangoz.updateme;
 
 import io.salyangoz.updateme.listener.OnNegativeButtonClickListener;
 import io.salyangoz.updateme.listener.OnPositiveButtonClickListener;
+import io.salyangoz.updateme.listener.OnUpdateMeListener;
 import io.salyangoz.updateme.listener.OnUpdateNeededListener;
 
 import android.content.Context;
@@ -14,6 +15,7 @@ import android.content.Context;
 public class UpdateMeBuilder {
 
     private OnUpdateNeededListener onUpdateNeededListener;
+    private OnUpdateMeListener onUpdateMeListener;
     private OnPositiveButtonClickListener onPositiveButtonClickListener;
     private OnNegativeButtonClickListener onNegativeButtonClickListener;
     private int checkIntervalInSeconds = 30;
@@ -40,9 +42,21 @@ public class UpdateMeBuilder {
 
     }
 
+    public UpdateMeBuilder setTopColor(int topColorRes) {
+
+        this.topColorRes = topColorRes;
+        return this;
+    }
+
     public UpdateMeBuilder setFetchInterval(int seconds) {
 
         this.checkIntervalInSeconds = seconds;
+        return this;
+    }
+
+    public UpdateMeBuilder onUpdateMeListener(OnUpdateMeListener onUpdateMeListener) {
+
+        this.onUpdateMeListener = onUpdateMeListener;
         return this;
     }
 
@@ -67,6 +81,7 @@ public class UpdateMeBuilder {
     public UpdateMe build() {
 
         return new UpdateMe(context,
+                onUpdateMeListener,
                 onUpdateNeededListener,
                 onNegativeButtonClickListener,
                 onPositiveButtonClickListener,
