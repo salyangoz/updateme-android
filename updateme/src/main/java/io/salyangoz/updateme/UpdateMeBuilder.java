@@ -148,4 +148,10 @@ public class UpdateMeBuilder {
         return this;
     }
 
+    public UpdateMeBuilder setHeaderColorRes(int color) {
+        this.setHeaderColor(color);
+        return this;
+    }
+
+
 }
